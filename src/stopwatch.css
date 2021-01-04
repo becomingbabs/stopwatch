@@ -1,0 +1,110 @@
+/**
+ * /* Variabes
+ *
+ * @format
+ */
+
+$orange: #ffa600;
+$grey: #f3f3f3;
+$white: #fff;
+$base-color: $orange;
+
+/* Mixin's */
+@mixin transition {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+@mixin corners($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  -khtml-border-radius: $radius;
+}
+
+body {
+  background: linear-gradient(0.25turn, #003a6f, #383838);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  height: 100%;
+}
+
+.imgs {
+  margin: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+#img1 {
+  margin-right: 1em;
+  max-width: 100%;
+  height: auto;
+}
+
+#img2 {
+  margin-left: 35%;
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  width: 800px;
+  margin: 30px auto;
+  color: #f8f8ff;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-weight: 100;
+  font-size: 2.6em;
+  text-transform: uppercase;
+}
+
+#h2 {
+  font-size: 2em;
+}
+
+#seconds,
+#tens {
+  font-size: 2em;
+}
+
+button {
+  @include corners(5px);
+  background: white;
+  color: black;
+  border: solid 1px $white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 18px 10px;
+  width: 180px;
+  margin: 10px;
+  outline: none;
+  &:hover {
+    @include transition;
+    background: $white;
+    border: solid 1px $white;
+    color: $base-color;
+  }
+}
+
+/*
+@media only screen and (max-width: 400px) {
+  #img1 #img2 {
+       height: 30%; 
+   }
+  }
+
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    #img1 #img2 {
+        height: 60%; 
+    }
+  }*/
